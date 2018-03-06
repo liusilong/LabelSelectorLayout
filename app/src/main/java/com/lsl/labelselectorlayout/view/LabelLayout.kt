@@ -106,6 +106,7 @@ class LabelLayout(context: Context, attr: AttributeSet?) : ViewGroup(context, at
      * 设置列表
      */
     fun setList(items: List<String>) {
+        if (childCount > 0) removeAllViews()
         items.forEach {
             it.apply {
                 val lp = MyLayoutParams(400, 160)
